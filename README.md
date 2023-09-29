@@ -15,3 +15,5 @@ A més a més,  les hem adquirit també de la base de dades que tenim al Cmpus V
 
 - Script: conté el codi en Python que fa tot el procés de la detecció
 
+-  Directori actes: directori que conté les actes que hem anat fent per cada sessió. 
+
