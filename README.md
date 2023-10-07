@@ -29,9 +29,26 @@ Aquestes imtges han estat obtingudes del parking interior de la UAB de l'escola 
 
 Tractament d'imatge
 
-Abans de poder detectar la localtizació de la matrícula i fer que la seva detecció sigui molt més reduïda la imatge ha de pasar per una serie de transformacions i tractaments que no només possibiliten obtenir la localització de la mtrícula que sino també ho fan possible. Aquestes transofrmacions eliminen objectes que poden confondre le nostre model amb una matrícula. Les diferents transformacions realitzades són les seguüents:
 
-(cuando esten acabados los tratamainetos explicar los pasos)
+Abans de localitzar la matrícula, tractament la imatge amb una sèrie de transformacions geomètriques i morfològiques que permeten que la detecció sigui molt més fàcil i més robusta.
+Les operacions que hem emprat han estat les següents:
+
+Binarització: apliquem la binarització, que és el procés de convertir la imatge en blanc o negre segons un llindar, perquè millora el contrast en ressaltar vores i detalls, a més redueix el soroll i les imperfeccions a la imatge, també simplifica el processament i accelera els algorismes de detecció.
+Finalment, prepara la imatge per al reconeixement òptic de caràcters (OCR).
+
+Blur: apliquem el blur, perquè és un filtre de desenfocament i per tant ens pot ser molt útil perquè també redueix el soroll a la imatge, eliminant detalls innecessaris que no s'han eliminat amb la binarització, a més elimina els detalls no importants que poden dificultar la detecció de la matrícula i sobretot homogeneïtza la il·luminació.
+
+Otsu: apliquem aquesta tècnica de binarització automàtica i va molt bé per acabar d'eliminar el soroll de la imatge, per facilitar la detecció dels caràcters, ja que millora i ressalta els caràcters de la matrícula.
+
+Opening: apliquem l'operació morfològica d'opening, perquè té molts beneficis, per exemple: elimina el soroll de la imatge, a més uneix els caràcters que es troben separats per alguna imperfecció de la matrícula, també omple els buits, redueix detalls finets i millora la forma dels objectes.
+
+Erosió: apliquem l'erosió per eliminar detalls no desitjats, per refinar les voreres i preparar la detecció acurada dels caràcters.
+
+Dilatació: apliquem la dilatació, ja que ens relata els caràcters, combina els píxels propers per tal que se'ns faciliti la detecció, a més omplim buits i millora la robustesa.
+
+Omplir els buits en blanc: i per acabar apliquem la versió d'imfill de MATLAB a Python, per omplir els buits que es generen en les àrees que ens interessen.
+
+
 
 
 Detección de voreres
