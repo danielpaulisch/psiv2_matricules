@@ -47,15 +47,16 @@ Omplir els buits en blanc: i per acabar apliquem la versió d'imfill de MATLAB a
 
 Detecció de voreres
 
+Para detectar les voreres utilitzem la funció findcountourns que ens retorna totes les parts de color blanc que estan envoltades de color negre. Amb aquest procés ens quedem amb els possibles candidats a matrícula, després iterem aquests contorns amb una sèrie de condicions que compleixen les matrícules.
+Vam trobar que la majoria d'imatges les podem detectar fàcilment amb la part blava on ens diu que és una matrícula espanyola i per tant ens dona molta informació del que pertany a la matrícula. Definim quin és el contorn correcte dient que el que tingui la part blava a l'interior de les diferents voreres creades, i que sigui la més gran de totes, és la matrícula. A
 
-
-Detección de voreres
-
-Para detectar les voresres utilitzem la funció findcountourns que ens retorna totes les parts de color balanc que estan envoltades de color negre fent aixì ens quedem amb el possibles candiats a mmatricula després iterme aquests contorns per definir on és la matrícula amb una serie de condicions que compleixen les matrícules al observar els difernts images i resultats, vam torbar que la majoria de imatges podem detectar facilment el la part blava on ens diu que és una matrícula espanyola i per tan ens dona molta informació del que pertany a la matrícula. Definim quin és el contorn correcte dient que el que tingui la part blava al interior dels diferents controns creats a més a més ha de ser el més grans de tots el que tenen parts blaves a dins, aqui agafem el contorn que és la matrícula. Aquest contorn pot tindre més infromació que la matrícula ja que pot detectar algunes part del coche com dins del contron però la part importan es que hi hagi dins la matrícula per poder detectar el números.
 
 Rectangle de la matrícula
 
-Al definir les voreres no acaben de ser del tot rectangular i la majoria de vegades tenen formes extranyes, que poden a tallar parcialment part de la matrícula, tot i que per l'ull huma no suposa cap problema a lhora de veure els números que hi ha en la matrícula, per identificació amb el model com a vegades els números poden tocar els contorns per tan genera probles per saber de quin número o lletra es tracte. Per això ampliem el contron dibuixant un rectangle que conté a dins tot el contor, fent aixì que no es talli cap númeor perquè el OCR pogui detectar bé els caràcters de la matrícula. Amb el rectangle dibuixat serà la part que retallarem de la imatge en tonalitats de grisos. 
+En definir les voreres no acaben de ser del tot rectangular i la major part de les vegades tenen formes estranyes, que poden tallar parcialment part de la matrícula, tot i que per l'ull humà no suposa cap problema, per un model si els caràcters estan tocant una vorera no poden saber amb certesa de quin caràcter es tracta. Per això ampliem el contorn dibuixant un rectangle que conté a dins tot el contornanterior, fent així que no es talli cap número perquè l'OCR pugui detectar bé els caràcters de la matrícula. Amb el rectangle dibuixat serà la part que retallarem de la imatge en tonalitats de grisos.
+
+
+
 
 
 
