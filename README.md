@@ -31,6 +31,17 @@ Tractament d'imatge
 
 Abans de poder detectar la localtizació de la matrícula i fer que la seva detecció sigui molt més reduïda la imatge ha de pasar per una serie de transformacions i tractaments que no només possibiliten obtenir la localització de la mtrícula que sino també ho fan possible. Aquestes transofrmacions eliminen objectes que poden confondre le nostre model amb una matrícula. Les diferents transformacions realitzades són les seguüents:
 
+(cuando esten acabados los tratamainetos explicar los pasos)
+
+
+Detección de voreres
+
+Para detectar les voresres utilitzem la funció findcountourns que ens retorna totes les parts de color balanc que estan envoltades de color negre fent aixì ens quedem amb el possibles candiats a mmatricula després iterme aquests contorns per definir on és la matrícula amb una serie de condicions que compleixen les matrícules al observar els difernts images i resultats, vam torbar que la majoria de imatges podem detectar facilment el la part blava on ens diu que és una matrícula espanyola i per tan ens dona molta informació del que pertany a la matrícula. Definim quin és el contorn correcte dient que el que tingui la part blava al interior dels diferents controns creats a més a més ha de ser el més grans de tots el que tenen parts blaves a dins, aqui agafem el contorn que és la matrícula. Aquest contorn pot tindre més infromació que la matrícula ja que pot detectar algunes part del coche com dins del contron però la part importan es que hi hagi dins la matrícula per poder detectar el números.
+
+Rectangle de la matrícula
+
+Al definir les voreres no acaben de ser del tot rectangular i la majoria de vegades tenen formes extranyes, que poden a tallar parcialment part de la matrícula, tot i que per l'ull huma no suposa cap problema a lhora de veure els números que hi ha en la matrícula, per identificació amb el model com a vegades els números poden tocar els contorns per tan genera probles per saber de quin número o lletra es tracte. Per això ampliem el contron dibuixant un rectangle que conté a dins tot el contor, fent aixì que no es talli cap númeor perquè el OCR pogui detectar bé els caràcters de la matrícula. Amb el rectangle dibuixat serà la part que retallarem de la imatge en tonalitats de grisos. 
+
 
 
 
