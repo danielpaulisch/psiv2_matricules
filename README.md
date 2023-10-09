@@ -95,7 +95,7 @@ Finalment, voliem comentar també un problema que ens ha sorgit a mesura que ana
 Així doncs, encara que podem afirmar que el nostre codi és robuts a molts casos, quan tenim un cotxe del mateix blau, no detecta bé la matrícula. 
 
 
-
+Millores
 
 
 
