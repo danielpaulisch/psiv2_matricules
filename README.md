@@ -85,7 +85,8 @@ Podem concloure dient que l'elecció de traiar el OCR Tessearct ha estat molt bo
 En altres paraules el nostre programa balanceja per tal que el resultats siguin el més acurat possible, però a al avegada que no tardi massa, per això hem acabat triant el Tesseract. 
 Per altra banda, podem comprovar que la diferència entre els accuracy de train i test del Tesseract no és molts significativa, per tant, podem afirmar que el nostre programa és bastant robust i que no hi ha presència del fenòmen d'overfitting.
 
-Finalment, voliem comentar també un problema que ens ha sorgit a mesura que anavem fent el programa i és que, com nosaltres detectem una zona blava, per detectar la matrícula.  
+Finalment, voliem comentar també un problema que ens ha sorgit a mesura que anavem fent el programa i és que, com nosaltres detectem una zona blava, per detectar la matrícula quan hi ha cotxes amb el mateix blau elèctric que la zona blava de la E d'Espanya, el cotxe no detecta només aquella zona blava i per tant no detecta la matrñicula. 
+Així doncs, encara que podem afirmar que el nostre codi és robuts a molts casos, quan tenim un cotxe del mateix blau, no detecta bé la matrícula. 
 
 
 
