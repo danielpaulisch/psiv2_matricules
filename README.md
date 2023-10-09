@@ -20,7 +20,7 @@ A més a més, les hem adquirit també de la base de dades que tenim al Campus V
 
 Base de dades
 
-La nostra base de dades consisteix en unes (n imatges) de cotxes realitzades manualment de les quals dividirem en un train i un test. El train té unes (n imatges) de fotos i el test en conté unes 6 fotos. Els diferents processaments d'imatges i canvis duts a terme per detectar les matrícules es faran sobre el train i a la part de comprovació és veure si aquests canvis també afecta a un grup de test per visualitzar si el nostre model és prou bo per detectar imatges. La base de dades té un nombre d'imatges bastant reduït perquè com que no es tracta de una IA no necessitem un conjunt d'entrenament massiu; i amb un nombre reduït d'imatges amb processament clàssic podem incloure la gran majoria de casos i excepcions que estan en el nostre model d'entrenament.
+La nostra base de dades consisteix en unes 29 de cotxes realitzades manualment de les quals dividirem en un train i un test. El train té unes 23  de fotos i el test en conté unes 6 fotos. Els diferents processaments d'imatges i canvis duts a terme per detectar les matrícules es faran sobre el train i a la part de comprovació és veure si aquests canvis també afecta a un grup de test per visualitzar si el nostre model és prou bo per detectar imatges. La base de dades té un nombre d'imatges bastant reduït perquè com que no es tracta de una IA no necessitem un conjunt d'entrenament massiu; i amb un nombre reduït d'imatges amb processament clàssic podem incloure la gran majoria de casos i excepcions que estan en el nostre model d'entrenament.
 Comprovem amb el test que no s'està produint el fenomen overfitting amb el conjunt d'entrenament.
 
 Aquestes imatges han estat obtingudes del pàrquing interior de la UAB de l'escola d'enginyeria. Realitzades amb els nostres dispositius mòbils i algunes imatges de la base de dades del professor compartida a través del campus virtual sobre el mateix pàrquing. La il·luminació del pàrquing és suau, ja que és cobert tot i que té espais per on passa la llum solar indirectament.
@@ -67,7 +67,43 @@ Per facilitar el OCR al trobar carecteritiques hem de fer que les lletres estigu
 
 Resultats
 
-Alhora de veure resultats vam trobar que un problema no era la identificació de lletres del OCR sino la detecció deles matrícules és per això que vam enfocar els nostres esforços en tractar la imatge en diferetns punts del nostre pipeline  per tal de aconseguir que les nostres imatges poguin detectar la matrícula i no elements que externs al coche o parts rectangulars del coche que es poden ser detectades com si fossin matrícules.
+A l'hora de veure resultats vam trobar que un problema no era la identificació de lletres de l'OCR sinó la detecció de les matrícules és per això que vam enfocar els nostres esforços a tractar la imatge en diferents punts del nostre pipeline per tal d'aconseguir que les nostres imatges puguin detectar la matrícula i no elements externs al cotxe o parts rectangulars del cotxe que es poden ser detectades com si fossin matrícules.
+Els resultats que hem obtingut amb el nostre programa és de 21 sobre 29, és a dir, detecta 21 matrícules de 29 que n'hi ha  ala base de dades. amb el OCR de 
+
+Les comprovaciones que hem fet, a més a més de comparar-ho manualment, hem calculat l'accuracy tant de train com de test, per tal de validar i afirmar que el nostre programa és robust i que no hi ha presència de Tesseract.
+L'accuracy del train és d'un 0.813, i l'accuracy de test d'un 0.714.
+
+
+Tot i això, vam volem fer més comprovacions, en aquest cas hem volgut comprovar els resultats de l'OCR que tenim amb el EasyOCR, perquè aquest és complex per tant sabem que si la diferència que hi ha de resutats no és tant significativa, vol dir que el nostre programa és bastant robut i correcte. 
+L'accuracy de train amb EasyOCR és d'un 0.869 i del test és un 0.834. 
+
+Per últim vam fer una matriu d'errors, per comprovar de les matrícules que no s'han detectat, quins son els seus errors més comuns, és a dir, quines lletres son les que el programa no les detecta i si les detecta i s'equivoca quins son aquest caràcter que es solen confondre. 
+
+Conclusió
+
+Podem concloure dient que l'elecció de traiar el OCR Tessearct ha estat molt bona idea, ja que és més o menys igual de robuts que el OCR EasyOCR que és consideret complex, ja que els accuracy ens donen més o menys molt semblants. I encara que el accuracy d'aquest segon és més elevat tarda més, 1 min, per tant en comparació amb el del Tesseract que és 5,6 segons, doncs no és massa òptim en el nostre cas. 
+En altres paraules el nostre programa balanceja per tal que el resultats siguin el més acurat possible, però a al avegada que no tardi massa, per això hem acabat triant el Tesseract. 
+Per altra banda, podem comprovar que la diferència entre els accuracy de train i test del Tesseract no és molts significativa, per tant, podem afirmar que el nostre programa és bastant robust i que no hi ha presència del fenòmen d'overfitting.
+
+Finalment, voliem comentar també un problema que ens ha sorgit a mesura que anavem fent el programa i és que, com nosaltres detectem una zona blava, per detectar la matrícula.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
