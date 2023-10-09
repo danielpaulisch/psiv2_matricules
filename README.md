@@ -20,9 +20,9 @@ A més a més, les hem adquirit també de la base de dades que tenim al Campus V
 - 
 -Directori codis: Conte varies proves que hem anat fent. Es tracta de un cementi de codis
 
--scipt.py: arxiu de python que llegeix una imatge i imprimeix la mtricula predita
+-scipt.py: arxiu de python que llegeix una imatge i imprimeix la matricula predita
 
--scipt_carpeta.py: arxiu de python que llegeix totes les imatges de una carpeta i imprimeix la mstricula predita de cada una de elles.
+-scipt_carpeta.py: arxiu de python que llegeix totes les imatges de una carpeta i imprimeix la matricula predita de cada una de elles.
 
 Base de dades
 
