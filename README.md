@@ -75,7 +75,7 @@ Les comprovacions que hem fet, a més a més de comparar-ho manualment, hem calc
 
 Tot i això, vam voler fer més comprovacions, en aquest cas hem volgut comprovar els resultats de l'OCR que tenim amb el EasyOCR, perquè aquest és complex, per tant, sabem que si la diferència que hi ha de resultats no és tan significativa, vol dir que el nostre programa és bastant robust i correcte. L'accuracy de train amb EasyOCR és d'un 0.869 i del test és un 0.834.
 
-Finalment, vam fer una matriu d'errors, per comprovar de les matrícules que no s'han detectat, quins són els seus errors més comuns, és a dir, quines lletres són les que el programa no les detecta i si les detecta i s'equivoca quins són aquest caràcter que se solen confondre.
+Finalment, vam fer una matriu d'errors, per comprovar de les matrícules que no s'han detectat, quins són els seus errors més comuns, és a dir, quines lletres són les que el programa no les detecta i si les detecta i s'equivoca quins són aquest caràcter que se solen confondre. Això és degut que al haver-hi tants caràcters i vvoler observar la matriu de confusió per veure quins caràcters confunia amb uns altres per tindre en compte alhora de veure el resultats del nostre model quines lletres o números es poden interpretr com altres. Ens hem decidit per veure només aquelles parts que en són de diferents.
 
 Conclusió
 
@@ -85,7 +85,7 @@ Finalment, voliem comentar també un problema que ens ha sorgit a mesura que ana
 
 Millores
 
-
+Com a millores i observacions del nostre treball a futur s'ha de tenir en compte de que les imatges en rebut un tractament previ segons el tipus de parking que era. És a dir que el ser un parking cobert on la llum i altres factors visuals poden variar amb un parking descobert. La part previa de tractment d'imatge s'hauria de revisar al implemntar el model en parkings descoberts. També al veure que el cotxes blaus amb una tonalitat semblant a al color que indetifica el país de la matrícula, s'uposa un problema de detecció de matrícula tot i que no hi ha molts cotxes d'aquest color. Es pot desenvolupar al projecte amb datasets de cotxes blaus per tractar aquest problema.
 
 
 
