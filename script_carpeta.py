@@ -7,13 +7,18 @@ from skimage.segmentation import clear_border
 import pytesseract
 
 pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract'
+#descomentar si es col pasar la carpeta com argument
+#format: nom de la carpeta sense /
+#l'arxiu ja llegeix en base al direcotri en el que ens trobem
 """
 assert len(sys.argv)>1, "No s'ha passat carpeta"    
-carpeta=sys.argv[1]"""
+carpeta=sys.argv[1] """
+
+#comentar la seguent linia en cas de descomentar lo anterior
 carpeta='Imatges'
 path = os.getcwd()
 carpeta_dades="\\"+str(carpeta)
-
+#codi no comentat a partir d'aquest punt per explicacio: codi_final.ipynb
 path+=carpeta_dades
 nom_imagenes = os.listdir(path)
 imagenes = []
@@ -21,9 +26,9 @@ imagenes_b = []
 ll_img = []
 
 for titulo in nom_imagenes:
-    
+
     if titulo.endswith('.jpg') or titulo.endswith('.jpeg'):
-        img =  cv.imread(carpeta_dades + titulo)
+        img =  cv.imread(carpeta+"\\" + titulo)
         ll_img.append(img)
         img_gris = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
         b,g,r = cv.split(img)

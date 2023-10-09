@@ -7,18 +7,24 @@ from skimage.segmentation import clear_border
 import pytesseract
 
 pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract'
+#descomentar si es col parar la imatge com argument
+#format: nom de la imatge amb .jpeg o .jpg o altres formats legibles per cv2
+#l'arxiu ja llegeix en base al direcotri en el que ens trobem 
 """ 
 assert len(sys.argv)>1, "No s'ha passat imatge"
 imatge=sys.argv[1]"""
+
+#comentar la seguent linia en cas de descomentar lo anterior
 imatge='Imatges\\matricula_10.jpg'
 path = os.getcwd()
-carpeta_dades="\\"+str(imatge)
 
+carpeta_dades=str(imatge)
+#codi no comentat a partir d'aquest punt per explicacio: codi_final.ipynb
 path+=carpeta_dades
 
 
 
-img =  cv.imread(path)
+img =  cv.imread(carpeta_dades)
 
 img_gris = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 b,g,r = cv.split(img)
