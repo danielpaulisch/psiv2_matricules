@@ -7,9 +7,10 @@ from skimage.segmentation import clear_border
 import pytesseract
 
 pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract'
-assert len(sys.argv)>1, "No s'ha passat carpeta"
-    
-carpeta=sys.argv[1]
+"""
+assert len(sys.argv)>1, "No s'ha passat carpeta"    
+carpeta=sys.argv[1]"""
+carpeta='Imatges'
 path = os.getcwd()
 carpeta_dades="\\"+str(carpeta)
 
