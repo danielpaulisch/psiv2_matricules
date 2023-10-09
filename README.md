@@ -14,9 +14,15 @@ La distribució del GitHub és la següent:
 - Directori Imatges: conté les imatges dels cotxes. Aquestes les hem adquirit manualment fent fotos en el pàrquing de cotxes de la universitat.
 A més a més, les hem adquirit també de la base de dades que tenim al Campus Virtual.
 
-- Script: conté el codi en Python que fa tot el procés de la detecció
+- codi_final: conté el codi en Python que fa tot el procés de la detecció
 
 - Directori actes: directori que conté les actes que hem anat fent per cada sessió. A cada acte es menciona el que s'ha anat fent i acordant en els diferents dies de treball a la universitat.
+- 
+-Directori codis: Conte varies proves que hem anat fent. Es tracta de un cementi de codis
+
+-scipt.py: arxiu de python que llegeix una imatge i imprimeix la mtricula predita
+
+-scipt_carpeta.py: arxiu de python que llegeix totes les imatges de una carpeta i imprimeix la mstricula predita de cada una de elles.
 
 Base de dades
 
