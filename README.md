@@ -75,7 +75,9 @@ Les comprovacions que hem fet, a més a més de comparar-ho manualment, hem calc
 
 Tot i això, vam voler fer més comprovacions, en aquest cas hem volgut comprovar els resultats de l'OCR que tenim amb el EasyOCR, perquè aquest és complex, per tant, sabem que si la diferència que hi ha de resultats no és tan significativa, vol dir que el nostre programa és bastant robust i correcte. L'accuracy de train amb EasyOCR és d'un 0.869 i del test és un 0.834.
 
-Finalment, vam fer una matriu d'errors, per comprovar de les matrícules que no s'han detectat, quins són els seus errors més comuns, és a dir, quines lletres són les que el programa no les detecta i si les detecta i s'equivoca quins són aquest caràcter que se solen confondre. Això és degut que al haver-hi tants caràcters i vvoler observar la matriu de confusió per veure quins caràcters confunia amb uns altres per tindre en compte alhora de veure el resultats del nostre model quines lletres o números es poden interpretr com altres. Ens hem decidit per veure només aquelles parts que en són de diferents.
+Finalment, vam fer una matriu d'errors, per comprovar de les matrícules que no s'han detectat, quins són els seus errors més comuns, és a dir, quines lletres són les que el programa no les detecta i si les detecta i s'equivoca quins són aquest caràcter que se solen confondre. Això és degut que al haver-hi tants caràcters no es pot obervar bé la matriu de confuió i no és pràctic. Per tant vam decidir només viualitzar en la matriu aquelles lletres que es confonen amb unes altres. Al veure la matriu no veiem cap tipus de patrò on el qual podem afirmar que un caràcter es confon amb un altre.
+
+
 
 Conclusió
 
