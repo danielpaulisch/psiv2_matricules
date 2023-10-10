@@ -17,12 +17,15 @@ A més a més, les hem adquirit també de la base de dades que tenim al Campus V
 - codi_final: conté el codi en Python que fa tot el procés de la detecció
 
 - Directori actes: directori que conté les actes que hem anat fent per cada sessió. A cada acte es menciona el que s'ha anat fent i acordant en els diferents dies de treball a la universitat.
-- 
--Directori codis: Conte varies proves que hem anat fent. Es tracta de un cementi de codis
+  
+-Directori codis: Conte varies proves que hem anat fent. Es tracta de un cementiri de codis
 
--scipt.py: arxiu de python que llegeix una imatge i imprimeix la matricula predita
+-scipt.py: arxiu de python que llegeix una imatge i imprimeix la matricula predita, hem fet aquest codi per tal que pugueu fer una prova amb qualsevol imatge que vulgueu.
+Però només una.
 
--scipt_carpeta.py: arxiu de python que llegeix totes les imatges de una carpeta i imprimeix la matricula predita de cada una de elles.
+-scipt_carpeta.py: arxiu de python que llegeix totes les imatges de una carpeta i imprimeix la matricula predita de cada una de elles. Hem fet aquest codi, per tal que, pugueu executar el codi amb el conjunt d'imatges que vulgueu. 
+
+- Presentació: la presentació del repte 1. 
 
 Base de dades
 
