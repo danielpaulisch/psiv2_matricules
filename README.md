@@ -25,7 +25,7 @@ Però només una.
 
 -scipt_carpeta.py: arxiu de python que llegeix totes les imatges de una carpeta i imprimeix la matricula predita de cada una de elles. Hem fet aquest codi, per tal que, pugueu executar el codi amb el conjunt d'imatges que vulgueu. 
 
-- Presentació: la presentació del repte 1. 
+- Detecció matrícules: la presentació del repte 1. 
 
 Base de dades
 
