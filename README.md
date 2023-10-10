@@ -44,6 +44,8 @@ Finalment, prepara la imatge per al reconeixement òptic de caràcters (OCR).
 
 Blur: apliquem el blur, perquè és un filtre de desenfocament i per tant ens pot ser molt útil perquè també redueix el soroll a la imatge, eliminant detalls innecessaris que no s'han eliminat amb la binarització, a més elimina els detalls no importants que poden dificultar la detecció de la matrícula i sobretot homogeneïtza la il·luminació.
 
+ClearBorder: amb aquesta funció eliminavem les voreres, per tal d¡eliminar tot el soroll possible i que sigui molt més fàcil detectar les àrees màximes. 
+
 Otsu: apliquem aquesta tècnica de binarització automàtica i va molt bé per acabar d'eliminar el soroll de la imatge, per facilitar la detecció dels caràcters, ja que millora i ressalta els caràcters de la matrícula.
 
 Opening: apliquem l'operació morfològica d'opening (erosió + dilatació), perquè té molts beneficis, per exemple: elimina el soroll de la imatge, a més uneix els caràcters que es troben separats per alguna imperfecció de la matrícula, també omple els buits, redueix detalls finets i millora la forma dels objectes.
