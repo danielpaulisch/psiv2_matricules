@@ -25,6 +25,8 @@ Però només una.
 
 -scipt_carpeta.py: arxiu de python que llegeix totes les imatges de una carpeta i imprimeix la matricula predita de cada una de elles. Hem fet aquest codi, per tal que, pugueu executar el codi amb el conjunt d'imatges que vulgueu. 
 
+- Presentació: la presentació del repte 1. 
+
 Base de dades
 
 La nostra base de dades consisteix en unes 29 de cotxes realitzades manualment de les quals dividirem en un train i un test. El train té unes 23  de fotos i el test en conté unes 6 fotos. Els diferents processaments d'imatges i canvis duts a terme per detectar les matrícules es faran sobre el train i a la part de comprovació és veure si aquests canvis també afecta a un grup de test per visualitzar si el nostre model és prou bo per detectar imatges. La base de dades té un nombre d'imatges bastant reduït perquè com que no es tracta de una IA no necessitem un conjunt d'entrenament massiu; i amb un nombre reduït d'imatges amb processament clàssic podem incloure la gran majoria de casos i excepcions que estan en el nostre model d'entrenament.
